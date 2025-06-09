@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // --- LÓGICA DO MENU RESPONSIVO ---
-    $('.hamburger-menu').on('click', function() {
+    $('.hamburger-menu').on('click', function () {
         // Alterna a classe 'active' no próprio hambúrguer (para estilizar o X)
-        $(this).toggleClass('active'); 
+        $(this).toggleClass('active');
         // Alterna a classe 'active' na lista do menu (para exibir/ocultar)
-        $('header nav ul').toggleClass('active'); 
+        $('header nav ul').toggleClass('active');
     });
 
     const MAX_FILE_SIZE_MB = 1; // Define o tamanho máximo do arquivo em Megabytes
@@ -17,23 +17,23 @@ $(document).ready(function() {
     const closeModalBtn = $('.close-btn');
 
     // Abrir o modal
-    openModalBtn.on('click', function() {
+    openModalBtn.on('click', function () {
         modal.show();
     });
 
     // Fechar o modal
-    closeModalBtn.on('click', function() {
+    closeModalBtn.on('click', function () {
         modal.hide();
     });
 
-    $(window).on('click', function(event) {
+    $(window).on('click', function (event) {
         if ($(event.target).is(modal)) {
             modal.hide();
         }
     });
 
     // --- NOVO TRECHO: VALIDAÇÃO IMEDIATA AO SELECIONAR A IMAGEM ---
-    $('#animalPhoto').on('change', function() {
+    $('#animalPhoto').on('change', function () {
         const file = this.files[0];
         if (file && file.size > MAX_FILE_SIZE_BYTES) {
             // Avisa o usuário que o arquivo é muito grande
@@ -44,7 +44,7 @@ $(document).ready(function() {
     });
 
     // Lidar com o envio do formulário
-    $('#animalForm').on('submit', function(event) {
+    $('#animalForm').on('submit', function (event) {
         event.preventDefault();
 
         const animalPhotoInput = $('#animalPhoto')[0];
@@ -64,7 +64,7 @@ $(document).ready(function() {
 
             const reader = new FileReader();
 
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 const photoBase64 = e.target.result;
 
                 const newAnimal = {
@@ -126,4 +126,23 @@ $(document).ready(function() {
         });
     }
 
+    $('#pegarLocalizacaoBtn').on('click', function () {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const lat = position.coords.latitude.toFixed(6);
+                    const long = position.coords.longitude.toFixed(6);
+
+                    $('#latitude').val(lat);
+                    $('#longitude').val(long);
+                    alert("Localização preenchida com sucesso!");
+                },
+                (error) => {
+                    alert("Não foi possível obter a localização: " + error.message);
+                }
+            );
+        } else {
+            alert("Geolocalização não é suportada pelo seu navegador.");
+        }
+    });
 });
