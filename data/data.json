@@ -1,0 +1,32 @@
+[
+  {
+    "tipo": "Cachorro",
+    "porte": "Médio",
+    "localizacao": {
+      "latitude": -23.55052,
+      "longitude": -46.633308,
+      "rua": "Av. Paulista",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "pais": "Brasil"
+    },
+    "referencia": "Próximo ao metrô Consolação",
+    "descricao": "Cachorro preto, parecia assustado e com coleira vermelha.",
+    "foto": "https://exemplo.com/fotos/cachorro1.jpg"
+  },
+  {
+    "tipo": "Gato",
+    "porte": "Pequeno",
+    "localizacao": {
+      "latitude": -22.906847,
+      "longitude": -43.172896,
+      "rua": "Rua das Laranjeiras",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ",
+      "pais": "Brasil"
+    },
+    "referencia": "Em frente a uma padaria",
+    "descricao": "Gatinho branco com manchas cinzas, parecia estar doente.",
+    "foto": "https://exemplo.com/fotos/gato1.jpg"
+  }
+]
