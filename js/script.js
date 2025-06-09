@@ -1,4 +1,12 @@
 $(document).ready(function() {
+    // --- LÓGICA DO MENU RESPONSIVO ---
+    $('.hamburger-menu').on('click', function() {
+        // Alterna a classe 'active' no próprio hambúrguer (para estilizar o X)
+        $(this).toggleClass('active'); 
+        // Alterna a classe 'active' na lista do menu (para exibir/ocultar)
+        $('header nav ul').toggleClass('active'); 
+    });
+
     const MAX_FILE_SIZE_MB = 1; // Define o tamanho máximo do arquivo em Megabytes
     const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024; // Converte para Bytes
 

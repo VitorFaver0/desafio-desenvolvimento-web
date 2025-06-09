@@ -2,17 +2,28 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="max-age=31536000, public">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajude um Pet - Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-
     <header>
         <nav>
-            <a href="index.html" class="logo">Ajude um Pet</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo"/>
+                Ajude um Pet
+            </a>
+            <div class="hamburger-menu">
+                <img src="images/hamburger.png" alt="Menu Hamburger">
+            </div>
+
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="find.html">Animais Encontrados</a></li>
@@ -24,7 +35,7 @@
     <main class="container">
         <h1>Viu um animal abandonado?</h1>
         <div class="imageContainer">
-            <img width="500px" src="images/dog&cat.png" alt="Cachorro e gato">
+            <img class="bannerImage" src="images/dog&cat.png" alt="Cachorro e gato">
         </div>
         <p>Cadastre-o em nossa plataforma e ajude-o a encontrar um lar ou seu dono.</p>
         <button id="openModalBtn">Cadastrar Animal</button>
