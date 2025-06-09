@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=31536000, public">
+    <title>Ajude um Pet - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Ajude um Pet</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="find.html">Animais Encontrados</a></li>
+                <li><a href="about.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Viu um animal abandonado?</h1>
+        <div class="imageContainer">
+            <img width="500px" src="images/dog&cat.png" alt="Cachorro e gato">
+        </div>
+        <p>Cadastre-o em nossa plataforma e ajude-o a encontrar um lar ou seu dono.</p>
+        <button id="openModalBtn">Cadastrar Animal</button>
+    </main>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Cadastrar Animal Encontrado</h2>
+           
+            <form id="animalForm">
+                <label for="animalPhoto">Foto do Animal:</label>
+                <input type="file" id="animalPhoto" accept="image/*" required>
+
+                <label for="animalLocation">Localização (Bairro, Rua):</label>
+                <input type="text" id="animalLocation" placeholder="Ex: Centro, Rua das Flores" required>
+
+                <label for="animalDescription">Descrição:</label>
+                <textarea id="animalDescription" rows="4" placeholder="Ex: Cão, porte médio, pêlo caramelo, parece assustado." required></textarea>
+                
+                <label for="contactInfo">Seu Contato (Opcional):</label>
+                <input type="text" id="contactInfo" placeholder="Seu nome, telefone ou rede social">
+
+                <button type="submit">Salvar Cadastro</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
