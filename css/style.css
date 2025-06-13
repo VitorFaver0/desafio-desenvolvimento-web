@@ -96,13 +96,12 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    background-color: rgba(255, 255, 255, 0.2);
-    outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
 }
 
-
 .hamburger-menu {
-    display: none;
+    display: none; 
     flex-direction: column;
     justify-content: space-around;
     width: 28px;
@@ -168,6 +167,9 @@ footer {
     bottom: 0;
     margin-top: auto;
     font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(38,166,154,0.4);
+    transition: background-color 0.4s ease, box-shadow 0.3s ease;
+    font-weight: 600;
 }
 
 footer p {
@@ -288,6 +290,8 @@ footer p {
     font-size: 24px;
     margin-bottom: 10px;
     color: #4CAF50;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+    animation: fadeInUp 0.5s ease forwards;
 }
 
 @keyframes fadeInUp {
@@ -295,7 +299,6 @@ footer p {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
